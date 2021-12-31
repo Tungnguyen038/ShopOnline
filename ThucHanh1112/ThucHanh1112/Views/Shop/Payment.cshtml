@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section css
+{
+    <link rel="stylesheet" href="~/Asset/asserts/category.css" />
+    <link rel="stylesheet" href="~/Asset/categorycss/category-pay.css" />
+}
+
+
+<section class="body-pay">
+    <div class="container row">
+        <div class="container-left">
+            <div class="pay-left">
+                <div class="left-name">
+                    <div class="topic">
+                        <h1>Miều Fashionista</h1>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-p row">
+                            <p>Giỏ hàng</p>
+                            <span>&#62;</span>
+                            <p>Thông tin giao hàng</p>
+                            <span>&#62;</span>
+                            <p style="color: #b21212;">Phương thức thanh toán</p>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h2>Thông tin giao hàng</h2>
+                    </div>
+                </div>
+                <div class="left-text">
+                    <div class="dang-nhap row">
+                        <p>Bạn đã có tài khoản?</p>
+                        <p><a href="../login.html">Đăng nhập</a></p>
+                    </div>
+                    <div class="input">
+                        <div class="name1">
+                            <li><input placeholder="Họ và tên" type="text" /></li>
+                        </div>
+                        <div class="thongtin row">
+                            <div class="mail">
+                                <li><input placeholder="Email (nếu có)" type="text" /></li>
+                            </div>
+                            <div class="sdt">
+                                <li><input placeholder="Số điện thoại" type="text" /></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diachi">
+                        <li><input placeholder="Địa chỉ" type="text" /></li>
+                    </div>
+                </div>
+                <div class="left-button row">
+                    <div class="gio-hang">
+                        <p><a href="">Giỏ hàng</a></p>
+                    </div>
+                    <div class="button-pay">
+                        <button>Tiếp tục phương thức thanh toán</button>
+                    </div>
+                </div>
+                <div class="pay-bottom">
+                    <p>Powered by Haravan</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="pay-right">
+                <div class="san-pham">
+                    <div class="sp row">
+                        <div class="sp-img">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/11/73dfb06d6f5fb12af7eb6471bd491ade.JPG"
+                                 alt="" />
+                        </div>
+                        <span class="quatity">1</span>
+                        <div class="ten-sp">
+                            <p>Alicia Dress</p>
+                            <p>Nâu hoa</p>
+                        </div>
+                        <div class="price">
+                            <p>
+                                256,000<sup><u>đ</u></sup>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sp row">
+                        <div class="sp-img">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/10/940eec093914fb8d53f8d58712e14d1c.JPG"
+                                 alt="" />
+                        </div>
+                        <span class="quatity">1</span>
+                        <div class="ten-sp">
+                            <p>Caroll Dress</p>
+                            <p>Trắng / S</p>
+                        </div>
+                        <div class="price">
+                            <p>
+                                264,000<sup><u>đ</u></sup>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gia-tam">
+                    <div class="gia-sp row">
+                        <div class="the-p">
+                            <p>Tạm tính</p>
+                        </div>
+                        <div class="price">
+                            <p>
+                                520,000<sup><u>đ</u></sup>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="phi-vanchuyen row">
+                        <div class="the-p">
+                            <p>Phí vận chuyển</p>
+                        </div>
+                        <div class="price">
+                            <p><span>&#9866;</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tong-tien row">
+                    <div class="tong">
+                        <p>Tổng cộng</p>
+                    </div>
+                    <div class="vnd">
+                        <p>VND</p>
+                    </div>
+                    <div class="tien">
+                        <p>
+                            520,000<sup><u>đ</u></sup>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="bottom"></div>
+<div class="delete-cart animate__animated animate__fadeInBottomRight">
+    <button class="del-cart">Xóa</button>
+    <button class="edit-cart">sửa</button>
+</div>
+
+<script src="~/Asset/js/home.js"></script>
+

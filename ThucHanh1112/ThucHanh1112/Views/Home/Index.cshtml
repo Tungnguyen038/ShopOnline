@@ -1,0 +1,217 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@section css
+{
+    <link rel="stylesheet" href="~/Asset/asserts/indexTT.css" />
+}
+
+
+<span class="loader"></span>
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        const loader = document.querySelector('.loader');
+        loader.className += " hidden";
+    })
+</script>
+
+<div class="container">
+    <!-- Slider 1 -->
+    <div class="slider" id="slider1">
+        <!-- Slides -->
+        <div style="background-image: url('../../Asset/img1/HOME5.jpg')"></div>
+        <div style="background-image: url('../../Asset/img1/HOME2.jpg')"></div>
+        <div style="background-image: url('../../Asset/img1/HOME4.jpg')"></div>
+        <div style="background-image: url('../../Asset/img1/HOME3.jpg')"></div>
+        <div style="background-image: url('../../Asset/img1/HOME1.jpg')"></div>
+        <!-- The Arrows -->
+        <i class="left"
+           class="arrows"
+           style="z-index: 2; position: absolute">
+            <svg viewBox="0 0 100 100">
+                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
+            </svg>
+        </i>
+        <i class="right"
+           class="arrows"
+           style="z-index: 2; position: absolute">
+            <svg viewBox="0 0 100 100">
+                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                      transform="translate(100, 100) rotate(180) "></path>
+            </svg>
+        </i>
+        <!-- Title Bar -->
+        <span class="titleBar">
+            <h1>Chần chờ gì nửa mà không mua sắm cho mình nào...</h1>
+        </span>
+    </div>
+
+    <br />
+
+    <div class="row2Wrap">
+        <div class="slider" id="slider2">
+            <div style="
+                  background-image: url(https://img.mwc.com.vn/giay-thoi-trang?&w=450&h=450&FileInput=//Upload/2021/11/z2911961731128-0b8291135444a750f681439bd62f8bbe.jpg);
+                "></div>
+            <div style="
+                  background-image: url(https://img.mwc.com.vn/giay-thoi-trang?&w=450&h=450&FileInput=//Upload/2021/11/z2924639690924-12ff846380e2fe6ba6741a2699af93bb.jpg);
+                "></div>
+            <div style="
+                  background-image: url(https://img.mwc.com.vn/giay-thoi-trang?&w=450&h=450&FileInput=//Upload/2021/11/z2931363901939-f48d904a7298ae77d5b11cdbc6435cbb.jpg);
+                "></div>
+            <div style="
+                  background-image: url(https://img.mwc.com.vn/giay-thoi-trang?&w=450&h=450&FileInput=//Upload/2021/05/z2468550823557-bace1502ce584436465650fea14918f4.jpg);
+                "></div>
+
+            <i class="left"
+               class="arrows"
+               style="z-index: 2; position: absolute">
+                <svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
+                </svg>
+            </i>
+            <i class="right"
+               class="arrows"
+               style="z-index: 2; position: absolute">
+                <svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                          transform="translate(100, 100) rotate(180) "></path>
+                </svg>
+            </i>
+            <!-- Title Bar -->
+            <!--
+            <span class="titleBar">
+                <h1>I am like a leaf in the wind.</h1>
+                <p>Watch me soar!</p>
+            </span>
+            -->
+        </div>
+
+        <!-- <h3>Individual slide text</h3> -->
+        <!-- Slider 1 -->
+        <div class="slider" id="slider3">
+            <div style="
+                  background-image: url(https://pubcdn.ivymoda.com/files/news/2021/11/19/6ca62ae8721b5b437e35246c49e5b832.jpg);
+                ">
+                <span>
+                    <h2>Tinh tế, độc quyền...</h2>
+                </span>
+            </div>
+            <div style="
+                  background-image: url(https://pubcdn.ivymoda.com/files/news/2021/11/17/33906a1852fe202404f5c0e04ec53420.jpg);
+                ">
+                <span>
+                    <h2>Thời trang hấp dẫn...</h2>
+                </span>
+            </div>
+            <div style="
+                  background-image: url(https://pubcdn.ivymoda.com/files/news/2021/11/17/198f647809aed20c43d7ea314e56528a.jpg);
+                ">
+                <span>
+                    <h2>Quyến rũ, sắc xảo...</h2>
+                </span>
+            </div>
+            <!-- The Arrows -->
+            <i class="left"
+               class="arrows"
+               style="z-index: 2; position: absolute">
+                <svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
+                </svg>
+            </i>
+            <i class="right"
+               class="arrows"
+               style="z-index: 2; position: absolute">
+                <svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                          transform="translate(100, 100) rotate(180) "></path>
+                </svg>
+            </i>
+            <!-- Title Bar -->
+            <!--     <span class="titleBar">
+                <h1>I am like a leaf in the wind.</h1>
+                <p>Watch me soar!</p>
+            </span> -->
+        </div>
+    </div>
+</div>
+
+<!-- phan tim kiem -->
+<div class="mobile-layer animate__animated animate__backInUp">
+    <div class="modal-overlay"></div>
+    <div class="mobile-s">
+        <div class="close-search-vip">
+            <i class="ti-close close-search"></i>
+        </div>
+        <div class="input-search">
+            <input type="text" placeholder="Tìm kiếm" />
+            <i class="ti-search"></i>
+        </div>
+    </div>
+</div>
+
+
+
+<!--  mobile menu -->
+<div class="mobile-menu animate__animated animate__bounceInLeft">
+    <div class="overlay-mnu"></div>
+    <div class="mobi-menu">
+        <div class="menu-header">
+            <div class="item-menu">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href=""><span>Nam</span></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=""><span>Nữ</span></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=""><span>saleonline</span></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=""><span> new arrivals</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="close-menu">
+                <a href="">
+                    <i class="ti-close"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="body-menu-item">
+            <ul class="body-list">
+                <li class="body-item">
+                    <a href=""><span>bộ sưu tập</span></a>
+                </li>
+                <li class="body-item">
+                    <a href=""><span>áo nam</span></a>
+                </li>
+                <li class="body-item">
+                    <a href=""><span>quần nam</span></a>
+                </li>
+                <li class="body-item">
+                    <a href=""><span>giày dép nam</span></a>
+                </li>
+                <li class="body-item">
+                    <a href=""><span>phụ kiện thời trang nam</span></a>
+                </li>
+                <li class="body-item">
+                    <a href=""><span>+ trợ giúp</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="delete-cart animate__animated animate__fadeInBottomRight" style="transition: all .5s;">
+    <button class="del-cart">Xóa</button>
+    <button class="edit-cart">sửa</button>
+</div>
+
+
+<script src="~/Asset/js/home.js"></script>
+
