@@ -1,4 +1,5 @@
-﻿
+﻿@model ShopOnlineConnection.SanPham
+
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -27,7 +28,7 @@
             <div class="product-content-left row">
                 <div class="product-content-left-big-img">
                     <img id="input"
-                         src="https://pubcdn.ivymoda.com/files/product/thumab/1366/2021/12/02/41777daa5cb05f32d9d77b8fbc972468.JPG"
+                         src="@Model.HinhChinh"
                          alt=""
                          style="border-radius: 5px;" />
                 </div>
@@ -54,11 +55,11 @@
 
                 <!-- --------------------------------product------------------------------- -->
                 <div class="product-content-right-product-name">
-                    <h1>ĐẦM DẬP LY DÁNG XÒE MS 48M6334</h1>
-                    <p>MSP: 48M6334</p>
+                    <h1>@Model.TenSanPham</h1>
+                    <p>MSP: @Model.MaSanPham</p>
                 </div>
                 <div class="product-content-right-product-price">
-                    <p>900.000<sup>đ</sup></p>
+                    <p>@Model.Gia<sup>đ</sup></p>
                 </div>
                 <div class="product-content-right-product-color">
                     <p>

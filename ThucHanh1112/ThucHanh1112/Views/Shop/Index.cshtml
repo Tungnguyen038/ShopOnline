@@ -1,4 +1,6 @@
-﻿
+﻿@model PagedList.IPagedList<ShopOnlineConnection.SanPham>
+@using PagedList.Mvc
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -68,191 +70,22 @@
                     </div>
                 </div>
                 <div class="content row">
-                    <a href="@Url.Action("Details" , new { id =1 })" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/7fbe10f8e0bf159b5e7c68ba8176e0c8.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">800.000<u>đ</u></p>
-                                <p>256.000<u>đ</u></p>
+                    @foreach (var item in Model)
+                    {
+                        <a  class="hihihii" href="@Url.Action("Details", new { id = item.MaSanPham})">
+                            <div class="content-item content-item-active">
+                                <img src="@item.HinhChinh" alt="">
+                                <h1>@item.TenSanPham</h1>
+                                <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
+                                    <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">800.000<u>đ</u></p>
+                                    <p>@item.Gia<u>đ</u></p>
 
+                                </div>
+                                <div class="sale-div"> SALE</div>
                             </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="@Url.Action("Details" , new { id =1 })" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/22/3c857031bcc4785a9ec44d3a708a5393.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">756.000<u>đ</u></p>
-                                <p>355.000<u>đ</u></p>
+                        </a>
+                    }
 
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/26/8576694138547113a41e7b4df6e7c98d.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">1.560.000<u>đ</u></p>
-                                <p>1.256.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/10/940eec093914fb8d53f8d58712e14d1c.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">550.000<u>đ</u></p>
-                                <p>249.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/06/21/aa8d299269938b71c9ed4cbc4f2d86da.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">650.000<u>đ</u></p>
-                                <p>346.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/11/73dfb06d6f5fb12af7eb6471bd491ade.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">470.000<u>đ</u></p>
-                                <p>299.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/748085618a706c45199555db9f19fa24.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">589.000<u>đ</u></p>
-                                <p>449.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/06/21/cfaef84a52ba8c2af559e65d27820038.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">389.000<u>đ</u></p>
-                                <p>199.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html" class="hihihii">
-                        <div class="content-item content-item-active">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/7fbe10f8e0bf159b5e7c68ba8176e0c8.JPG" alt="">
-                            <h1>ALICIA DRESS</h1>
-                            <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
-                                <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">450.000<u>đ</u></p>
-                                <p>299.000<u>đ</u></p>
-
-                            </div>
-                            <div class="sale-div"> SALE</div>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/748085618a706c45199555db9f19fa24.JPG" alt="">
-                            <h1>ANNIE DRESS</h1>
-                            <p>230,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/b204ec9015051ff36fe614c8b720c912.JPG" alt="">
-                            <h1>TWEED ELLA JACKET</h1>
-                            <p>300,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/17/4fd27142e6cd1f40f71cf6cd4b1f229a.JPG" alt="">
-                            <h1>BILLIE SKIRT</h1>
-                            <p>130,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/22/3c857031bcc4785a9ec44d3a708a5393.JPG" alt="">
-                            <h1>BUBY DRESS</h1>
-                            <p>240,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/06/21/cfaef84a52ba8c2af559e65d27820038.JPG" alt="">
-                            <h1>CARO BASIC SKIRT</h1>
-                            <p>184,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/06/21/aa8d299269938b71c9ed4cbc4f2d86da.JPG" alt="">
-                            <h1>CARO V SKIRT</h1>
-                            <p>176,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/22/937272d8502d53ecfaf89b50cb03864c.JPG" alt="">
-                            <h1>CAROLL DRESS</h1>
-                            <p>256,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/10/940eec093914fb8d53f8d58712e14d1c.JPG" alt="">
-                            <h1>CHARLICE DRESS</h1>
-                            <p>256,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/22/b95e05048d7d6114419c090bb226539a.JPG" alt="">
-                            <h1>CYCLAMEN DRESS</h1>
-                            <p>360,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/11/11/73dfb06d6f5fb12af7eb6471bd491ade.JPG" alt="">
-                            <h1>DOMINIC DRESS</h1>
-                            <p>360,000<u>đ</u></p>
-                        </div>
-                    </a>
-                    <a href="./product.html">
-                        <div class="content-item">
-                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2021/10/26/8576694138547113a41e7b4df6e7c98d.JPG" alt="">
-                            <h1>ELLA DRESS</h1>
-                            <p>273,000<u>đ</u></p>
-                        </div>
-                    </a>
 
                 </div>
             </div>
@@ -260,7 +93,9 @@
         <!-- endtest -->
         <div class="row list-inline" style="padding: 0; display: flex; justify-content: center;width: 100%;">
             <ul class="pagination">
-                <li class="pagination-item pagination-item-active">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+                @*<li class="pagination-item pagination-item-active">
                     <a href="#">
                         <span>1</span>
                     </a>
@@ -293,7 +128,7 @@
                             <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </span>
                     </a>
-                </li>
+                </li>*@
             </ul>
 
 
