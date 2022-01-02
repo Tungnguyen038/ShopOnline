@@ -18,5 +18,10 @@ namespace ThucHanh1112.Models.BUS
             var db = new ShopOnlineConnectionDB();
             return db.Query<SanPham>("select * from SanPham where MaNhaSanXuat='" + id +"'");
         }
+        public static void ThemNSX(NhaSanXuat nsx)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Insert(nsx);
+        }
     }
 }

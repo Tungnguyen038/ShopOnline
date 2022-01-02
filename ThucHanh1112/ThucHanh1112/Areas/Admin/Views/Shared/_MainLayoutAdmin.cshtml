@@ -1,0 +1,326 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="icon"
+          type="image/x-icon"
+          href="https://routine.vn/media/favicon/default/output-onlinejpgtools.png" />
+    <title>ADMIN</title>
+    <!-- Font Awesome -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="https://routine.vn/media/favicon/default/output-onlinejpgtools.png" />
+    <link rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <!-- <script src="./"></script> -->
+    <script src="~/Areas/AssetAdmin/jquery.twbsPagination.js" type="text/javascript"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/Areas/AssetAdmin/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Container wrapper -->
+            <div class="container">
+                <!-- Toggle button -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="@Url.Action("Index", "MainAdmin")">
+                        <img src="~/Areas/AssetAdmin/logo.jpg"
+                             height="40"
+                             width="40"
+                             alt="Admin Logo"
+                             loading="lazy" />
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <a class="text-reset me-3 dropdown-toggle hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+
+                    <!-- Avatar -->
+                    <a class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                             class="rounded-circle"
+                             height="25"
+                             alt="Black and White Portrait of a Man"
+                             loading="lazy" />
+                        <span class="text-dark mx-3">Xin chào:<span>Tùng vip pro</span></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+    </div>
+    </div>
+    <!-- Navbar -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center text-align-center">
+                    <h3 class="py-4">
+                        <a href="@Url.Action("Index", "MainAdmin")"><img src="https://routine.vn/media/logo/websites/1/ezgif-7-ee007e6332a0_2x.png"
+                             height="100%"
+                             alt="Admin Logo"
+                             loading="lazy" />
+                        </a>
+                        
+                    </h3>
+                    <hr class="m-0" />
+                </div>
+                <ul id="scroll-container2"
+                    class="sidenav-menu ps ps--active-y my-4"
+                    style="max-height: 300px; position: relative">
+                    <li class="sidenav-item my-2">
+                        <a  class="sidenav-link ripple-surface text-body"
+                           data-mdb-toggle="collapse"
+                           href="#sidenav-collapse-7-0-0"
+                           role="button">
+                            <i class="fas fa-bars "></i></i><a href="@Url.Action("Index","NhaSanXuatAdmin")" class="text-body"><span class="ms-4">Quản lý nhà sản xuất</span><i class="fas fa-angle-down rotate-icon ms-2"></i></a>
+                        </a>
+                        <ul class="
+                  sidenav-collapse
+                  scroll-section
+                  collapse
+                  perfect-scrollbar
+                  ps
+                "
+                            id="sidenav-collapse-7-0-0">
+                            <li class="sidenav-item">
+                                <a class="sidenav-link ripple-surface text-body">NAM</a>
+                            </li>
+                            <li class="sidenav-item">
+                                <a class="sidenav-link ripple-surface text-body">NỮ</a>
+                            </li>
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+                                <div class="ps__thumb-x"
+                                     tabindex="0"
+                                     style="left: 0px; width: 0px"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 0px; right: 0px">
+                                <div class="ps__thumb-y"
+                                     tabindex="0"
+                                     style="top: 0px; height: 0px"></div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="sidenav-item my-2">
+                        <a  class="sidenav-link ripple-surface text-body"
+                           data-mdb-toggle="collapse"
+                           href="#sidenav-collapse-7-0-1"
+                           role="button">
+                            <i class="fas fa-barcode-scan"></i><a href="@Url.Action("Index","LoaiSanPhamAdmin")" class="text-body"><span class="ms-3">Quản Lý loại sản phẩm</span></a>
+                        </a>
+                        <ul class="
+                  sidenav-collapse
+                  scroll-section
+                  collapse
+                  perfect-scrollbar
+                  ps
+                "
+                            id="sidenav-collapse-7-0-1">
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+                                <div class="ps__thumb-x"
+                                     tabindex="0"
+                                     style="left: 0px; width: 0px"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 0px; right: 0px">
+                                <div class="ps__thumb-y"
+                                     tabindex="0"
+                                     style="top: 0px; height: 0px"></div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="sidenav-item  my-2">
+                        <a  class="sidenav-link ripple-surface text-body"
+                           data-mdb-toggle="collapse"
+                           href="#sidenav-collapse-7-0-2"
+                           role="button">
+                            <i class="fas fa-barcode-scan"></i> <a class="text-body" href="@Url.Action("Index","SanPhamAdmin")"><span class="ms-3">Sản phẩm</span></a>
+                        </a>
+                        <ul class="
+                  sidenav-collapse
+                  scroll-section
+                  collapse
+                  perfect-scrollbar
+                  ps
+                "
+                            id="sidenav-collapse-7-0-2">
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+                                <div class="ps__thumb-x"
+                                     tabindex="0"
+                                     style="left: 0px; width: 0px"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 0px; right: 0px">
+                                <div class="ps__thumb-y"
+                                     tabindex="0"
+                                     style="top: 0px; height: 0px"></div>
+                            </div>
+                        </ul>
+                    </li>
+
+
+                    <li class="sidenav-item  my-2">
+                        <a class="sidenav-link ripple-surface text-body"
+                           data-mdb-toggle="collapse"
+                           href="#sidenav-collapse-7-0-5"
+                           role="button">
+                            <i class="fas fa-barcode-scan"></i><span class="ms-3">Hình ảnh sản phẩm</span>
+                        </a>
+                        <ul class="
+                  sidenav-collapse
+                  scroll-section
+                  collapse
+                  perfect-scrollbar
+                  ps
+                "
+                            id="sidenav-collapse-7-0-5">
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+                                <div class="ps__thumb-x"
+                                     tabindex="0"
+                                     style="left: 0px; width: 0px"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 0px; right: 0px">
+                                <div class="ps__thumb-y"
+                                     tabindex="0"
+                                     style="top: 0px; height: 0px"></div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="sidenav-item  my-2">
+                        <a class="sidenav-link ripple-surface text-body"
+                           data-mdb-toggle="collapse"
+                           href="#sidenav-collapse-7-0-6"
+                           role="button">
+                            <i class="fad fa-sign-out"></i><span class="ms-3">Đăng xuất</span>
+                        </a>
+
+                    </li>
+                    <div class="ps__rail-x" style="left: 0px; bottom: -73px">
+                        <div class="ps__thumb-x"
+                             tabindex="0"
+                             style="left: 0px; width: 0px"></div>
+                    </div>
+                    <div class="ps__rail-y"
+                         style="top: 73px; height: 262px; right: 0px">
+                        <div class="ps__thumb-y"
+                             tabindex="0"
+                             style="top: 57px; height: 204px"></div>
+                    </div>
+                </ul>
+                <div class="text-center" style="min-height: 3rem">
+                    <hr class="mt-0 mb-2" />
+                    <small>Hello Admin</small>
+                </div>
+            </div>
+            @RenderBody();
+        </div>
+    </div>
+  
+
+    <div class="container-fuild">
+        <footer class="bg-light text-center text-lg-start text-white">
+            <!-- Copyright -->
+            <div class="text-center p-3 py-4" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Nhóm 13 Vip pro:
+                <a class="text-white" href="https://mdbootstrap.com/">Nhosm13.com.vn</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
+</body>
+</html>
+
