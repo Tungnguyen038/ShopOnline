@@ -11,7 +11,7 @@ namespace ThucHanh1112.Controllers
     public class ShopController : Controller
     {
         // GET: Shop
-        public ActionResult Index(int page = 1, int pagesize = 4)
+        public ActionResult Index(int page = 1, int pagesize = 8)
         {
             var db = ShopOnlineBUS.DanhSach().ToPagedList(page, pagesize);
             return View(db);
@@ -23,9 +23,10 @@ namespace ThucHanh1112.Controllers
             var db = ShopOnlineBUS.ChiTiet(id);
             return View(db);
         }
-        public ActionResult Payment(int id)
+        public ActionResult Payment(String id)
         {
-            return View();
+            var db = ShopOnlineBUS.ThanhToan(id);
+            return View(db);
         }
 
         // GET: Shop/Create

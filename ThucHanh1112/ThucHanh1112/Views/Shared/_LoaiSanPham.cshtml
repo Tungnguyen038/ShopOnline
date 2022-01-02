@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ShopOnlineConnection.LoaiSanPham>
+
+<li class="header-left_left-item header-left_left-item-has-Nu">
+    <a href="@Url.Action("Index", "Shop")" class="">
+        <span class="header-left_title border-bottom">NỮ</span>
+    </a>
+    <div class="flex-ul flex-ul-nu">
+        <ul class="header-left_male-parent">
+            @foreach (var item in Model)
+            {
+                <li class="header-left_male-item">
+                    <a href="@Url.Action("Index", "LoaiSanPham", new { id= @item.MaLoaiSanPham})"> <span class="border-bottom"> @item.TenLoaiSanPham </span></a>
+                   
+                    <ul class="header-chil">
+                        <li class="header-chil_item">
+                            <span class="border-bottom">
+                                SS21-TROPICAL SOUND
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            }
+
+
+        </ul>
+    </div>
+</li>

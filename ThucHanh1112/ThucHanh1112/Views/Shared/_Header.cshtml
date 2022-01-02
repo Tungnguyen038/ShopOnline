@@ -1,0 +1,382 @@
+﻿
+<header class="header">
+    <div class="row row-height">
+        <div class="header-header">
+            <div class="header-left hide-on-mobile">
+                <ul class="header-left_left">
+                    @Html.Partial("_NhaSanXuat", ThucHanh1112.Models.BUS.NhaSanXuatBUS.DanhSach())
+                    @Html.Partial("_LoaiSanPham", ThucHanh1112.Models.BUS.LoaiSanPhamBUS.DanhSach())
+                    <li class="header-left_left-item header-left_left-item-sale">
+                        <span class="
+                        header-left_title
+                        border-bottom
+                        header-left_title-active
+                      ">SALE ONLINE</span>
+                        <div class="flex-ul flex-ul-sale">
+                            <ul class="header-left_male-parent">
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> NAM </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-left_left-item header-left_left-item-new">
+                        <span class="header-left_title border-bottom">NEW ARRIVALs</span>
+                        <div class="flex-ul flex-ul-new">
+                            <ul class="header-left_male-parent">
+                                <li class="
+                            header-left_male-item header-left_male-item-acti
+                          ">
+                                    <span class="border-bottom"> NAM </span>
+                                </li>
+                                <li class="
+                            header-left_male-item header-left_male-item-acti
+                          ">
+                                    <span class="border-bottom"> NỮ </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- logo mobile -->
+            <div class="header-logo">
+                <div class="menu-mobile">
+                    <i class="ti-menu"></i>
+                </div>
+
+                <a href="@Url.Action("Index", "Home") " class="logo">
+                    <img src="https://routine.vn/media/logo/websites/1/ezgif-7-ee007e6332a0_2x.png"
+                         style="fill: #fff"
+                         class="logo-header_img"
+                         alt="" />
+                </a>
+                <div class="search-mobile">
+                    <i class="ti-search"></i>
+                </div>
+            </div>
+            <!--  -->
+            <div class="header-right hide-on-mobile">
+                <div class="header-right_search" style="border-bottom:1px solid #fff ;">
+                    <input type="text"
+                           placeholder="Tìm kiếm"
+                           class="parent-search_input"
+                           style="border: none;" />
+                    <i class="fas fa-search" style="color: #fff;border: none;"></i>
+                </div>
+
+                <ul class="header-right_right">
+                    <li class="header-right-right-item">
+                        <a href="./login.html" class="header-login">
+                            <span class="header-right_title border-bottom">Đăng Nhập</span>
+                        </a>
+                    </li>
+                    <li class="header-right-right-item header-right-right-item-has">
+                        <span class="header-right_title border-bottom">Trợ Giúp</span>
+                        <div class="flex-ul flex-ul-help">
+                            <ul class="
+                          header-left_male-parent header-left_male-parent-help
+                        ">
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> CÔNG TY </span>
+                                    <ul class="header-chil">
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom"> VỀ CHÚNG TÔI </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom">
+                                                CHĂM SÓC KHÁCH HÀNG
+                                            </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom"> TUYỂN DỤNG </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> TIN TỨC </span>
+                                </li>
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> CHÍNH SÁCH </span>
+                                    <ul class="header-chil">
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom">
+                                                KHÁCH HÀNG THÂN THIẾT
+                                            </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom">
+                                                ĐỔI & TRẢ HÀNG
+                                            </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom"> BẢO HÀNH </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom"> BẢO MẬT </span>
+                                        </li>
+                                        <li class="header-chil_item">
+                                            <span class="border-bottom">
+                                                CÁC CÂU HỎI THƯỜNG GẶP
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> HỆ THỐNG CỬA HÀNG </span>
+                                </li>
+                                <li class="header-left_male-item">
+                                    <span class="border-bottom"> LIÊN HỆ </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="
+                      header-right-right-item
+                      gio-hang
+                      header-right-right__cart
+                    ">
+                        <span class="header-right_title border-bottom">Giỏ Hàng</span>
+                        <span class="header__cart-quantity">(9)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- phan gio hang -->
+    <div class="block__cart animate__animated animate__bounceInRight">
+        <div class="block block-minicart">
+            <div class="header__cart-list">
+                <div class="minicart-top">
+                    <a href="" class="minicart-link">
+                        <span class="minicart-gh">Giỏ hàng</span>
+                        <p class="minicart-sl">
+                            <span class="minicart-quantity">9</span>
+                            <span class="minicart-sp">Sản phẩm</span>
+                        </p>
+                    </a>
+                    <span class="minicart-close">Đóng</span>
+                </div>
+
+                <!-- css class này thành block để hiển thị giỏ hàng rỗng -->
+                <!-- <div class="header__cart-empty">
+                        <div class="header__cart-img">
+                            <img src="./" alt="" class="cart__img">
+                        </div>
+                        <h4 class="empty-cart">
+                            <span>Giỏ hàng trống rỗng</span>
+                        </h4>
+                        <span class="empty-cart2">
+                            <span>Bạn không có sản phẩm nào trong giỏ hàng</span>
+                        </span>
+                    </div> -->
+                <!-- end gio hang trong rong -->
+                <!-- co do trong gio hang -->
+                <div class="list-cart">
+                    <ul class="list-cart-list">
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="~/Asset/img1/HOME5.jpg" alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-cart-item">
+                            <a href="#" class="list-cart-link">
+                                <div class="list-cart-img">
+                                    <img src="https://routine.vn/media/catalog/product/cache/59db0cfd5192c9a4d6ff231b8171cf2c/z/2/z2990008326075_2400052467f313240a78f37a3c1f3457_2.jpg"
+                                         alt="có ảnh nha" />
+                                </div>
+                                <div class="list-cart-right">
+                                    <div class="heading-cart">
+                                        <h3>
+                                            ÁO POLO, NHÃN TRANG TRÍÁO POLO, NHÃN TRANG TRÍÁO
+                                            POLO, NHÃN TRANG TRÍ
+                                        </h3>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <span class="span1">S/ BRIGHT WHITE</span>
+                                    <span class="span2">380.000 đ</span>
+                                    <div class="quantity-cart">
+                                        <span>Tới sản phẩm</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</header>

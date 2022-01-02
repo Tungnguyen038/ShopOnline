@@ -19,5 +19,18 @@ namespace ThucHanh1112.Models.BUS
             var db = new ShopOnlineConnectionDB();
             return db.SingleOrDefault<SanPham> ("select * from SanPham where MaSanPham=@0", a);
         }
+
+        public static SanPham ThanhToan(string id)
+        {
+            var db = new ShopOnlineConnectionDB();
+            return db.SingleOrDefault<SanPham>("select * from SanPham where MaSanPham=@0", id);
+        }
+
+        public static IEnumerable <SanPham> Top4New(String a)
+        {
+            var db = new ShopOnlineConnectionDB();
+            return db.Query<SanPham>("select Top 4 * from SanPham where GhiChu=N'New'");
+        }
+
     }
 }

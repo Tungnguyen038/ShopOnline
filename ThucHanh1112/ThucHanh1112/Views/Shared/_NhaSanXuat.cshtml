@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ShopOnlineConnection.NhaSanXuat>
+
+<li class="header-left_left-item header-left_left-item-has">
+    @*@Html.ActionLink("NAM", "Index", "Shop")*@
+    <a href="@Url.Action("Index", "Shop") " class="">
+        <span class="header-left_title border-bottom">NAM</span>
+    </a>
+    <div class="flex-ul flex-ul-nam">
+        <ul class="header-left_male-parent">
+            @foreach(var item in Model)
+            {
+            <li class="header-left_male-item">
+                <a href="@Url.Action("Index", "NhaSanXuat", new { id = item.MaNhaSanXuat })"><span class="border-bottom"> @item.TenNhaSanXuat </span></a>
+                
+                <ul class="header-chil">
+                    <li class="header-chil_item">
+                        <span class="border-bottom">
+                            -SSOCIAL
+                        </span>
+                    </li>
+                </ul>
+            </li>
+            }
+            
+        </ul>
+    </div>
+</li>

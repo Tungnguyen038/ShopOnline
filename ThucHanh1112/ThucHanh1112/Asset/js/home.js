@@ -8,7 +8,6 @@
   );
   const giohang = document.querySelector('.gio-hang');
   const delCart = document.querySelector('.delete-cart');
-  console.log(delCart)
 
 
   function showCartBlock() {

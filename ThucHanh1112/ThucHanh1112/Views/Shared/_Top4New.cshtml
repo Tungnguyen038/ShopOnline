@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ShopOnlineConnection.SanPham>
+
+<div class="content row">
+    @foreach (var item in Model)
+    {
+        <a class="hihihii" href="@Url.Action("Details","Shop", new { id = item.MaSanPham})">
+            <div class="content-item content-item-active">
+                <img src="@item.HinhChinh" alt="">
+                <h1>@item.TenSanPham</h1>
+                <div class="div" style="display: flex; justify-content: center;margin-top: 10px;">
+                    <p class="price-sale" style="text-decoration: line-through;margin-right: 10px;">800.000<u>đ</u></p>
+                    <p>@item.Gia<u>đ</u></p>
+
+                </div>
+                <div class="sale-div"> SALE</div>
+            </div>
+        </a>
+    }
+
+
+</div>

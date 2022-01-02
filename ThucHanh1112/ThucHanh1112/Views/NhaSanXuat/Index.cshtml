@@ -6,6 +6,7 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+
 @section css
 {
     <link rel="stylesheet" href="~/Asset/asserts/category.css" />
@@ -72,7 +73,7 @@
                 <div class="content row">
                     @foreach (var item in Model)
                     {
-                        <a  class="hihihii" href="@Url.Action("Details","Shop", new { id = item.MaSanPham})">
+                        <a class="hihihii" href="@Url.Action("Details","Shop", new { id = item.MaSanPham})">
                             <div class="content-item content-item-active">
                                 <img src="@item.HinhChinh" alt="">
                                 <h1>@item.TenSanPham</h1>
@@ -94,7 +95,6 @@
         <div class="row list-inline" style="padding: 0; display: flex; justify-content: center;width: 100%;">
             <ul class="pagination">
                 @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
-
             </ul>
 
 
@@ -115,5 +115,7 @@
 </div>
 
 <script src="~/Asset/js/home.js"></script>
+
+
 
 

@@ -590,42 +590,41 @@ header:hover .header-header .header-logo .logo img {
  }
 
 
- .pagination-item {
-     margin-right: 25px;
+.pagination li {
+    margin-right: 25px;
+}
 
- }
- .pagination-item a {
-    --height: 30px;
-    display: block;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 2rem;
-    color: #939393;
-    min-width: 40px;
-    height: var(--height);
-    line-height: var(--height);
-    text-align: center;
-    border-radius: 2px;
+.pagination li a {
+        --height: 30px;
+        display: block;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 2rem;
+        color: #939393;
+        min-width: 40px;
+        height: var(--height);
+        line-height: var(--height);
+        text-align: center;
+        border-radius: 2px;
+    }
+    .pagination li.active {
+        background-color: #c0442f;
+    }
 
- }
- .pagination-item-active {
-     background-color: #c0442f;
- }
-
- .pagination-item a span {
-     font-size: 1.6rem;
-     color: var(--text-color);
- }
+    .pagination li a  {
+        font-size: 1.6rem;
+        color: var(--text-color);
+    }
 
  .pagination-item a span i {
      color: var(--text-color);
 
  }
- .pagination-item:hover {
-     background-color: #ccc;
+.pagination li:hover {
+    background-color: #ccc;
 }
 
-.pagination-item-active {
+.active {
     color: #000;
 }
 
