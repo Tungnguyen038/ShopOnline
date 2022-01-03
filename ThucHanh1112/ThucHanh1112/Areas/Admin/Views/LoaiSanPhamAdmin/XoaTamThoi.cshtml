@@ -1,38 +1,45 @@
-﻿
+﻿@model ShopOnlineConnection.LoaiSanPham
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "XoaTamThoi";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
 
 
 <div class="col-md-9">
     <div class="sort-by d-flex mt-5 justify-content-between">
-        <span style="font-size: 28px;"> CHỈNH SỬA THÔNG TIN LOẠI SẢN PHẨM</span>
+        <span style="font-size: 28px;"> CHỈNH SỬA THÔNG TIN NHÀ SẢN XUẤT</span>
         <div class="icon" style="margin-right: 10px; cursor: pointer; opacity: 0.8;">
             <i class="fad fa-plus mx-3"></i>
             <i class="fas fa-trash-alt"></i>
         </div>
     </div>
     <div class="div-edit my-3" style="height: 400px;display: block; overflow-y: auto;">
-        @using (Html.BeginForm("Create", "LoaiSanPhamAdmin", FormMethod.Post))
+        @using (Html.BeginForm("XoaTamThoi", "LoaiSanPhamAdmin", FormMethod.Post))
         {
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="MaLoaiSanPham" id="fname" placeholder="Nhập mã Loại Sản Phẩm" required>
+                <input type="text" class="form-control" name="MaLoaiSanPham" id="fname" placeholder="Nhập mã loại sản phẩm" required value="@Model.MaLoaiSanPham" readonly>
                 <label for="fname">Mã Loại Sản Phẩm</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="TenLoaiSanPham" id="lname" placeholder="Nhập Tên Loại Sản Phẩm" required>
+                <input type="text" class="form-control" name="TenLoaiSanPam" id="lname" placeholder="Nhập tên loại sản phẩm" required value="@Model.TenLoaiSanPham">
                 <label for="lname">Tên Loại Sản Phẩm</label>
             </div>
             <div class="form-floating mb-3">
                 <select name="TinhTrang" class="browser-default custom-select py-2 bg-white" style="width: 100%;" required>
-                    <option selected>Tinh Trang</option>
-                    <option value="0">Chưa khóa</option>
-                    <option value="1">Đã Khóa</option>
+                    @if (Model.TinhTrang == "1")
+                    {
+                        <option value="1" selected>Đã Khóa</option>
+                    }
+                    else
+                    {
+                        <option value="0" selected>Chưa khóa</option>
+
+                    }
+
                 </select>
             </div>
             <div class="form-floating mb-3">
-                <button type="submit" value="submit" class="btn btn-primary btn-rounded">Thêm Loại Sản Phẩm</button>
+                <button type="submit" value="submit" class="btn btn-primary btn-rounded">Xác nhận xóa</button>
             </div>
         }
 
@@ -44,8 +51,9 @@
 
 <script src="~/Areas/AssetAdmin/ckeditor/ckeditor.js"></script>
 <script>
-      CKEDITOR.replace('textAreaExample1');
+    CKEDITOR.replace('textAreaExample1');
 </script>
+
 
 
 

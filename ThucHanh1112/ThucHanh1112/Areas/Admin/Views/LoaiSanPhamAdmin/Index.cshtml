@@ -1,8 +1,86 @@
 ﻿
+@model IEnumerable<ShopOnlineConnection.LoaiSanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
 
-<h2> day la trang loai san pham</h2>
+<div class="col-md-9">
+    <div class="sort-by d-flex mt-5 justify-content-between">
+        <select name="sort" id="sort">
+            <option value="grow"> sắp xếp tăng dần</option>
+            <option value="grow"> sắp xếp giảm dần</option>
+            <option value="grow"> sắp xếp theo giá tăng dần</option>
+            <option value="grow"> sắp xếp theo giá giảm dần</option>
+        </select>
+        <div class="input-group mx-5">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Search</label>
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="icon d-flex align-items-center" style="margin-right: 10px; cursor: pointer; opacity: 0.8;">
+            <a href="@Url.Action("Create","LoaiSanPhamAdmin")"><i class="fas fa-plus mx-3"></i></a>
+            <a href="#"> <i class="fas fa-trash-alt"></i></a>
+
+        </div>
+    </div>
+    <table class="table align-middle my-3 table-striped table-hover" style="width: 100%;">
+        <thead text-center>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Mã Loại Sản Phẩm</th>
+                <th scope="col">Tên Loại Sản Phẩm</th>
+                <th scope="col">Tình Trạng</th>
+                <th scope="col">Sửa sản phẩm</th>
+                <th scope="col">Xóa sản phẩm</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-center">
+                    <th scope="row">1</th>
+                    <td>@item.MaLoaiSanPham</td>
+                    <td>@item.TenLoaiSanPham</td>
+                    <td>@item.TinhTrang</td>
+                    <td><a href="@Url.Action("Edit","LoaiSanPhamAdmin", new { id =item.MaLoaiSanPham})" class="text-body">sửa</a></td>
+                    <td>
+                        <a href="@Url.Action("XoaTamThoi","LoaiSanPhamAdmin", new { id =item.MaLoaiSanPham})">
+                            <button type="button" class="btn btn-danger btn-sm px-3">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </a>
+
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<div class="container d-flex justify-content-center my-5">
+    <nav aria-label="Page navigation d-flex justify-content-center">
+        <!-- <h1>hello</h1> -->
+        <ul class="pagination" id="pagination"></ul>
+    </nav>
+</div>
+<script type="text/javascript">
+    $(function () {
+        window.pagObj = $('#pagination').twbsPagination({
+            totalPages: 35,
+            visiblePages: 10,
+            onPageClick: function (event, page) {
+                console.info(page + ' (from options)');
+            }
+        }).on('page', function (event, page) {
+            console.info(page + ' (from event listening)');
+        });
+    });
+</script>
 

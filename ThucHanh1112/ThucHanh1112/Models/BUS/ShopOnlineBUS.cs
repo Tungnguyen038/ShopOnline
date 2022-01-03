@@ -8,6 +8,7 @@ namespace ThucHanh1112.Models.BUS
 {
     public class ShopOnlineBUS
     {
+        //-------Khách Hàng---------
         public static IEnumerable<SanPham> DanhSach()
         {
             var db = new ShopOnlineConnectionDB();
@@ -30,6 +31,17 @@ namespace ThucHanh1112.Models.BUS
         {
             var db = new ShopOnlineConnectionDB();
             return db.Query<SanPham>("select Top 4 * from SanPham where GhiChu=N'New'");
+        }
+        //---------------Admin--------------
+        public static IEnumerable<SanPham> DanhSachSP()
+        {
+            var db = new ShopOnlineConnectionDB();
+            return db.Query<SanPham>("select * from SanPham");
+        }
+        public static void InsertSP(SanPham sp)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Insert(sp);
         }
 
     }

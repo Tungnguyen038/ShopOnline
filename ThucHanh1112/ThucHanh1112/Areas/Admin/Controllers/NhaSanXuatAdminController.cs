@@ -13,7 +13,7 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         // GET: Admin/NhaSanXuat
         public ActionResult Index()
         {
-            var ds = NhaSanXuatBUS.DanhSach();
+            var ds = NhaSanXuatBUS.DanhSachAdmin();
             return View(ds);
         }
 
@@ -46,19 +46,19 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhaSanXuat/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String id)
         {
-            return View();
+            return View(NhaSanXuatBUS.ChiTietAdmin(id));
         }
 
         // POST: Admin/NhaSanXuat/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(String id, NhaSanXuat nsx)
         {
             try
             {
                 // TODO: Add update logic here
-
+                NhaSanXuatBUS.UpDateNSX(id, nsx);
                 return RedirectToAction("Index");
             }
             catch
@@ -66,8 +66,28 @@ namespace ThucHanh1112.Areas.Admin.Controllers
                 return View();
             }
         }
+        public ActionResult XoaTamThoi(String id)
+        {
+            return View(NhaSanXuatBUS.ChiTietAdmin(id));
+        }
 
+        [HttpPost]
+        public ActionResult XoaTamThoi(String id, NhaSanXuat nsx)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                nsx.TinhTrang = "1";
+                NhaSanXuatBUS.UpDateNSX(id, nsx);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
         // GET: Admin/NhaSanXuat/Delete/5
+
         public ActionResult Delete(int id)
         {
             return View();

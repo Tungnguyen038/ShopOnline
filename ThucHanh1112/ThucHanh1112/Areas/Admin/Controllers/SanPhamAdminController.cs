@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ShopOnlineConnection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ThucHanh1112.Models.BUS;
 
 namespace ThucHanh1112.Areas.Admin.Controllers
 {
@@ -11,7 +13,8 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         // GET: Admin/SanPham
         public ActionResult Index()
         {
-            return View();
+           
+            return View(ShopOnlineBUS.DanhSachSP());
         }
 
         // GET: Admin/SanPham/Details/5
@@ -28,12 +31,12 @@ namespace ThucHanh1112.Areas.Admin.Controllers
 
         // POST: Admin/SanPham/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(SanPham sp)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                ShopOnlineBUS.InsertSP(sp);
                 return RedirectToAction("Index");
             }
             catch

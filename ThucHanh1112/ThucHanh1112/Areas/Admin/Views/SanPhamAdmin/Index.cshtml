@@ -1,8 +1,9 @@
-﻿
+﻿@model IEnumerable<ShopOnlineConnection.SanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
+
 
 <div class="col-md-9">
     <div class="sort-by d-flex mt-5 justify-content-between">
@@ -23,122 +24,44 @@
         </div>
 
         <div class="icon d-flex align-items-center" style="margin-right: 10px; cursor: pointer; opacity: 0.8;">
-            <i class="fas fa-plus mx-3"></i>
-            <i class="fas fa-trash-alt"></i>
+            <a href="@Url.Action("Create","SanPhamAdmin")"><i class="fas fa-plus mx-3"></i></a>
+            <a href="#"> <i class="fas fa-trash-alt"></i></a>
+
         </div>
     </div>
     <table class="table align-middle my-3 table-striped table-hover" style="width: 100%;">
         <thead text-center>
             <tr>
-                <th scope="col">STT</th>
-                <th scope="col">ID</th>
-                <th scope="col">Danh mục</th>
-                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Mã sản Phẩm</th>
+                <th scope="col">Tên Sản Phẩm</th>
+                <th scope="col">Hình Ảnh</th>
                 <th scope="col">Giá</th>
-                <th scope="col">Ảnh</th>
-                <th scope="col">Tùy chỉnh</th>
-                <th scope="col">Xóa tất cả</th>
+                <th scope="col">Tình Trạng</th>
+                <th scope="col">Sửa sản phẩm</th>
+                <th scope="col">Xóa sản phẩm</th>
             </tr>
         </thead>
         <tbody>
+            @foreach (var item in Model)
+            {
             <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁTĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuatAdmin")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <tr class="text-center">
-                <th scope="row">1</th>
-                <td>6</td>
-                <td>No</td>
-                <td>ĐẦM NGỦ CỰC NGON VÀ MÁT</td>
-                <td>1.990.999</td>
-                <td><img src="//product.hstatic.net/1000358591/product/_lik8672__1__c64fdfdcefe844efaac3c430188325d9_grande.png" width="30px" alt="kh có ảnh"></td>
-                <td><a href="@Url.Action("Index","NhaSanXuat")" class="text-body">sửa</a></td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
+                <td>@item.MaSanPham</td>
+                <td>@item.TenSanPham</td>
+                <td><img src="@item.HinhChinh" alt="Alternate Text" style="width:50px;height:50px;" /></td>
+                <td>@item.Gia</td>
+                <td>@item.TinhTrang</td>
 
+                <td><a href="@Url.Action("Edit","SanPhamAdmin", new { id =item.MaSanPham})" class="text-body">sửa</a></td>
+                <td>
+                    <a href="@Url.Action("XoaTamThoi","SanPhamAdmin", new { id =item.MaSanPham})">
+                        <button type="button" class="btn btn-danger btn-sm px-3">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </a>
 
+                </td>
+            </tr>
+            }
 
         </tbody>
     </table>
@@ -163,4 +86,3 @@
         });
     });
 </script>
-

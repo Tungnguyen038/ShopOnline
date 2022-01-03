@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ShopOnlineConnection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ThucHanh1112.Models.BUS;
 
 namespace ThucHanh1112.Areas.Admin.Controllers
 {
@@ -11,7 +13,8 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPham
         public ActionResult Index()
         {
-            return View();
+            var db = LoaiSanPhamBUS.DanhSachAdmin();
+            return View(db);
         }
 
         // GET: Admin/LoaiSanPham/Details/5
@@ -28,12 +31,12 @@ namespace ThucHanh1112.Areas.Admin.Controllers
 
         // POST: Admin/LoaiSanPham/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(LoaiSanPham lsp)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                LoaiSanPhamBUS.InsertLSP(lsp);
                 return RedirectToAction("Index");
             }
             catch
@@ -43,19 +46,40 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         }
 
         // GET: Admin/LoaiSanPham/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String id)
         {
-            return View();
+            var db = LoaiSanPhamBUS.ChiTietAdmin(id);
+            return View(db);
         }
 
         // POST: Admin/LoaiSanPham/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(String id, LoaiSanPham lsp)
         {
             try
             {
                 // TODO: Add update logic here
+                LoaiSanPhamBUS.EditLSP(id, lsp);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult XoaTamThoi(String id)
+        {
+            return View(LoaiSanPhamBUS.ChiTietAdmin(id));
+        }
 
+        [HttpPost]
+        public ActionResult XoaTamThoi(String id, LoaiSanPham lsp)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                lsp.TinhTrang = "1";
+                LoaiSanPhamBUS.EditLSP(id, lsp);
                 return RedirectToAction("Index");
             }
             catch
