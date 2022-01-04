@@ -43,6 +43,21 @@ namespace ThucHanh1112.Models.BUS
             var db = new ShopOnlineConnectionDB();
             db.Insert(sp);
         }
+        public static SanPham ChiTietAdmin(String id)
+        {
+            var db = new ShopOnlineConnectionDB();
+            return db.SingleOrDefault<SanPham>("select * from SanPham where MaSanPham='" + id + "'");
+        }
+        public static void UpDateSP(String id, SanPham sp)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Update(sp, id);
+        }
+        public static void DeleteLSP(String id, SanPham sp)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Update(sp, id);
+        }
 
     }
 }

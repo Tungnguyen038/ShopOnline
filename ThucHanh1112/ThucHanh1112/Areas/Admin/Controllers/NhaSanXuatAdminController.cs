@@ -68,7 +68,7 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         }
         public ActionResult XoaTamThoi(String id)
         {
-            return View(NhaSanXuatBUS.ChiTietAdmin(id));
+            return View(NhaSanXuatBUS.ChiTietAdmin(id.Trim()));
         }
 
         [HttpPost]

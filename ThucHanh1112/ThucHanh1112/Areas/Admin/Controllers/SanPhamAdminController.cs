@@ -46,19 +46,39 @@ namespace ThucHanh1112.Areas.Admin.Controllers
         }
 
         // GET: Admin/SanPham/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String id)
         {
-            return View();
+            return View(ShopOnlineBUS.ChiTietAdmin(id));
         }
 
         // POST: Admin/SanPham/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(String id, SanPham sp)
         {
             try
             {
                 // TODO: Add update logic here
+                ShopOnlineBUS.UpDateSP(id, sp);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult XoaTamThoi(String id)
+        {
+            return View(ShopOnlineBUS.ChiTietAdmin(id));
+        }
 
+        [HttpPost]
+        public ActionResult XoaTamThoi(String id, SanPham sp)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                sp.TinhTrang = "1";
+                ShopOnlineBUS.DeleteLSP(id, sp);
                 return RedirectToAction("Index");
             }
             catch
